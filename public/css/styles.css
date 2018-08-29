@@ -9,13 +9,16 @@ audio {
   height: 25px;
   width:100px
 }
+.jumbotron {
+  background-image: url('../img/pac.jpeg');
+}
 .pressStartFont {
   font-family: PressStart2P;
   color: black
 }
 .intro-div {
   font-family: PressStart2P;
-  color: black;
+  color: rgb(32, 173, 32);
   font-size: 4em;
   text-shadow: -2px 0 0 #fdff2a,
     -4px 0 0 #df4a42,
@@ -43,13 +46,13 @@ audio {
     -4px 0 0 #df4a42,
     2px 0 0 #91fcfe,
     4px 0 0 #4405fc;
-  animation: blink 1s infinite;
+  animation: blink .5s infinite;
   display: block
 }
 
 
  @keyframes blink {
-   0% {color: black; display: none}
+   0% {color: rgb(32, 173, 32); display: none}
    100% {color: red; display: block}
  }
 
