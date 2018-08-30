@@ -19,7 +19,7 @@ class App extends Component {
   }
 
   componentWillMount() {
-    fetch('https://codacade.herokuapp.com/')
+    fetch('https://codacade-api.herokuapp.com/')
       .then(users => {
         return users.json()
       })
