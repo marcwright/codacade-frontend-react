@@ -35,56 +35,6 @@ class App extends Component {
         console.log(this.state.initialCodas)
     })
   }
-
-  // filterCodas() {
-  //   console.log("filtering")
-
-  //   // var newArray = []
-    
-  //   // this.state.initialCodas.forEach(coda => {
-  //   //   if (coda.name.toLowerCase().includes(this.state.searchVal)){
-  //   //     newArray.push(coda)
-
-  //   //     this.setState({
-  //   //       codas: newArray
-  //   //     })
-        
-  //   //   } 
-  //   //   else {
-  //   //     this.setState({
-  //   //       codas: this.state.initialCodas,
-  //   //       searchVal: ""
-  //   //     })
-  //   //   }
-  //   //   // else { return }
-  //   // //   this.setState({
-  //   // //     codas: newArray
-  //   // //   })
-  //   // // })    
-  //   // })
-  //   // console.log(newArray, this.state.initialCodas)
-    
-  //   // let filteredCodasArray = []
-  //   // const filteredCodasArray = this.state.codas.filter(coda => {
-  //   //   if (coda.name.includes(this.state.searchVal)) {
-  //   //     return coda
-  //   //   }
-  //   // })
-  //   // this.state.codas.forEach(coda => {
-  //   //   if (coda.name.includes(this.state.searchVal)) {
-  //   //     filteredCodasArray.push(coda)
-  //   //   }
-  //   // })    
-
-  //   // var updatedList = this.state.initialCodas
-  //   // updatedList = updatedList.filter(function(coda){
-  //   //   console.log(coda.name)
-  //   //   if (coda.name.toLowerCase().includes(this.state.searchVal.toLowerCase())) {
-  //   //       return coda
-  //   //     }
-  //   //   });
-  //   //   this.setState({codas: updatedList});
-  //   }
     
   filterCodas = () => {
     var filteredCodasArray = []
@@ -127,11 +77,35 @@ class App extends Component {
         })
 
     return (
-      <div className="row">
-        <SearchBar 
-          searchVal={this.state.searchVal}
-          handleChange={this.handleChange}/>
-        {codas}        
+      <div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+          <a class="navbar-brand pressStartFont" href="#">Codacade</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Add your app<span class="sr-only">(current)</span></a>
+              </li>
+            </ul>
+            <SearchBar 
+                  searchVal={this.state.searchVal}
+                  handleChange={this.handleChange}/>
+          </div>
+        </nav>
+
+        <main role="main">
+          <div class="album py-5">
+            <div class="container">
+              <div className="row">
+              
+                {codas}        
+              </div>
+            </div>
+          </div>
+        </main>
       </div>
     );
   }

@@ -5,14 +5,16 @@ export class SearchBar extends Component {
           
 
     return (
-      <div className="input-group mb-3">
-        <input 
+      <form className="form-inline my-2 my-lg-0">
+        <input className="form-control mr-sm-2" 
           type="text" 
           placeholder="Search..." 
+          aria-label="Search" 
           value={this.props.searchVal}
           onChange={this.props.handleChange}
-          className="form-control" />
-      </div>
+          className="form-control"
+          />
+      </form>
     )
   }
 }
