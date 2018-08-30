@@ -12,7 +12,6 @@ export class SearchBar extends Component {
           aria-label="Search" 
           value={this.props.searchVal}
           onChange={this.props.handleChange}
-          className="form-control"
           />
       </form>
     )

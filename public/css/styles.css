@@ -2,9 +2,15 @@
     font-family: PressStart2P;
     src: url(../fonts/PressStart2P.ttf);
 }
-/* * {
-  border: red 4px solid
-} */
+@font-face {
+  font-family: Optimist;
+  src: url(../fonts/Optimist_Rg.ttf);
+}
+body {
+  font-family: Optimist;
+  color: red
+}
+
 audio {
   height: 25px;
   width:100px
@@ -46,14 +52,17 @@ audio {
     -4px 0 0 #df4a42,
     2px 0 0 #91fcfe,
     4px 0 0 #4405fc;
-  animation: blink .5s infinite;
+  animation: blink 1s infinite;
   display: block
 }
 
 
  @keyframes blink {
-   0% {color: rgb(32, 173, 32); display: none}
-   100% {color: red; display: block}
+   0% {color: #10BD1B}
+   25% {color:#FFE34F}
+   50% {color: #004977}
+   75% {color: #FFE34F}   
+   100% {color:#D03027}
  }
 
  @media screen and (max-width: 510px) {
