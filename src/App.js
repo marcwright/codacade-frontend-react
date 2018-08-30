@@ -8,13 +8,10 @@ class App extends Component {
   constructor(props){
     super(props)
 
-    this.first = "Schmitty pants"
-
     this.state = {
       codas: [],
       initialCodas: [],
-      searchVal: "",
-      newArray: []
+      searchVal: ""
     }
 
     this.handleChange = this.handleChange.bind(this)
@@ -22,17 +19,17 @@ class App extends Component {
   }
 
   componentWillMount() {
-    fetch('http://localhost:3001/')
+    fetch('https://codacade.herokuapp.com/')
       .then(users => {
         return users.json()
       })
       .then(json => {
-        console.log(json)
+        // console.log(json)
         this.setState({
           initialCodas: json,
           codas: json
         })
-        console.log(this.state.initialCodas)
+        // console.log(this.state.initialCodas)
     })
   }
     
@@ -46,7 +43,7 @@ class App extends Component {
       }
     })
 
-    console.log(filteredCodasArray)
+    // console.log(filteredCodasArray)
 
     return this.setState({
       codas: filteredCodasArray
@@ -67,7 +64,7 @@ class App extends Component {
   
   render() {
         
-        console.log(this.state.searchVal)
+        // console.log(this.state.searchVal)
 
         const codas = this.state.codas.map(coda => {
           return <Card key={coda.id}
@@ -88,7 +85,7 @@ class App extends Component {
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
               <ul className="navbar-nav mr-auto">
                 <li className="nav-item active">
-                  <a className="nav-link" href="/form.html">Add your app<span className="sr-only">(current)</span></a>
+                  <a className="nav-link" href="form.html">Add your app<span className="sr-only">(current)</span></a>
                 </li>
               </ul>
               <SearchBar 
