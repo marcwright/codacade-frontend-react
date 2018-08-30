@@ -13,7 +13,6 @@ class App extends Component {
     this.state = {
       codas: [],
       initialCodas: [],
-      // filteredCodasArray: [],
       searchVal: "",
       newArray: []
     }
@@ -37,88 +36,82 @@ class App extends Component {
     })
   }
 
-  filterCodas() {
-    console.log("filtering")
+  // filterCodas() {
+  //   console.log("filtering")
 
-    // var newArray = []
+  //   // var newArray = []
     
-    // this.state.initialCodas.forEach(coda => {
-    //   if (coda.name.toLowerCase().includes(this.state.searchVal)){
-    //     newArray.push(coda)
+  //   // this.state.initialCodas.forEach(coda => {
+  //   //   if (coda.name.toLowerCase().includes(this.state.searchVal)){
+  //   //     newArray.push(coda)
 
-    //     this.setState({
-    //       codas: newArray
-    //     })
+  //   //     this.setState({
+  //   //       codas: newArray
+  //   //     })
         
-    //   } 
-    //   else {
-    //     this.setState({
-    //       codas: this.state.initialCodas,
-    //       searchVal: ""
-    //     })
-    //   }
-    //   // else { return }
-    // //   this.setState({
-    // //     codas: newArray
-    // //   })
-    // // })    
-    // })
-    // console.log(newArray, this.state.initialCodas)
+  //   //   } 
+  //   //   else {
+  //   //     this.setState({
+  //   //       codas: this.state.initialCodas,
+  //   //       searchVal: ""
+  //   //     })
+  //   //   }
+  //   //   // else { return }
+  //   // //   this.setState({
+  //   // //     codas: newArray
+  //   // //   })
+  //   // // })    
+  //   // })
+  //   // console.log(newArray, this.state.initialCodas)
     
-    // let filteredCodasArray = []
-    // const filteredCodasArray = this.state.codas.filter(coda => {
-    //   if (coda.name.includes(this.state.searchVal)) {
-    //     return coda
-    //   }
-    // })
-    // this.state.codas.forEach(coda => {
-    //   if (coda.name.includes(this.state.searchVal)) {
-    //     filteredCodasArray.push(coda)
-    //   }
-    // })    
+  //   // let filteredCodasArray = []
+  //   // const filteredCodasArray = this.state.codas.filter(coda => {
+  //   //   if (coda.name.includes(this.state.searchVal)) {
+  //   //     return coda
+  //   //   }
+  //   // })
+  //   // this.state.codas.forEach(coda => {
+  //   //   if (coda.name.includes(this.state.searchVal)) {
+  //   //     filteredCodasArray.push(coda)
+  //   //   }
+  //   // })    
 
-    // var updatedList = this.state.initialCodas
-    // updatedList = updatedList.filter(function(coda){
-    //   console.log(coda.name)
-    //   if (coda.name.toLowerCase().includes(this.state.searchVal.toLowerCase())) {
-    //       return coda
-    //     }
-    //   });
-    //   this.setState({codas: updatedList});
-    }
+  //   // var updatedList = this.state.initialCodas
+  //   // updatedList = updatedList.filter(function(coda){
+  //   //   console.log(coda.name)
+  //   //   if (coda.name.toLowerCase().includes(this.state.searchVal.toLowerCase())) {
+  //   //       return coda
+  //   //     }
+  //   //   });
+  //   //   this.setState({codas: updatedList});
+  //   }
     
-  
-  handleChange(e) {
+  filterCodas = () => {
+    var filteredCodasArray = []
+
+    this.state.initialCodas.forEach(coda => {
+      if (coda.name.toLowerCase().includes(this.state.searchVal)) {
+        console.log(coda)
+        return filteredCodasArray.push(coda)
+      }
+    })
+
+    console.log(filteredCodasArray)
+
+    return this.setState({
+      codas: filteredCodasArray
+    })
+
+  }
+
+
+  handleChange = (e) => {
     
     this.setState({
-      searchVal: e.target.value
+      searchVal: e.target.value.toLowerCase()
+    }, () => {
+      return this.filterCodas()
     })
-
-    
-    var newArray = []
-    
-    this.state.initialCodas.forEach(coda => {
-      if (coda.name.toLowerCase().includes(e.target.value)){
-        newArray.push(coda)
-
-        this.setState({
-          codas: newArray
-        })
-        
-      } 
-      else {
-        this.setState({
-          codas: this.state.initialCodas
-        })
-      }
-      // else { return }
-    //   this.setState({
-    //     codas: newArray
-    //   })
-    // })    
-    })
-    console.log(newArray, this.state.initialCodas)
-      
   }
   
   

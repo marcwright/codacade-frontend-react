@@ -1,17 +1,6 @@
 import React, { Component } from 'react';
 
 export class SearchBar extends Component {
-
-  constructor(props){
-    super(props)
-
-    //  this.state = {
-    //    searchVal: ""
-    //  }
-
-    //  this.handleChange = this.handleChange.bind(this)
-  }
-
   render() { 
           
 
