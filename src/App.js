@@ -69,7 +69,9 @@ class App extends Component {
           return <Card key={coda.id}
                        githubLink={coda.githubLink}
                        name={coda.name}
-                       pubicLink={coda.publicLink}
+                       appName={coda.appName}
+                       githubRepo={coda.githubRepo}
+                       pubicURL={coda.publicURL}
                        img={coda.img}
                   />
         })

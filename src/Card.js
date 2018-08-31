@@ -12,12 +12,12 @@ export class Card extends Component {
                 src={this.props.img} />
           </a>
           <div className="card-body">
-            <p className="card-text text-center">{this.props.name.toUpperCase()} <span className="black">/ {this.props.name.toUpperCase()}</span></p>
+            <p className="card-text text-center">{this.props.name.toUpperCase()} <span className="black">/ {this.props.appName.toUpperCase()}</span></p>
             <div className="container">
               <div className="row">
                 <div className="btn-group btn-group-sm col-lg-12" >
-                  <a href={this.props.githubLink} className="btn btn-dark text-center col-lg-6" target="_blank" role="button">GitHub</a>
-                  <a href={this.props.publicLink} className="btn btn-success text-center col-lg-6" role="button" target="_blank" aria-pressed="true">Play</a>
+                  <a href={this.props.githubRepo} className="btn btn-dark text-center col-lg-6" target="_blank" role="button">Repo</a>
+                  <a href={this.props.publicURL} className="btn btn-success text-center col-lg-6" role="button" target="_blank" aria-pressed="true">Play</a>
                 </div>
               </div>
             </div>
