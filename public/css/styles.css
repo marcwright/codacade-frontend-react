@@ -22,6 +22,14 @@ audio {
   height: 25px;
   width:100px
 }
+.c1 {
+  width: 100px;
+  height: 100px;
+  display: inline-block
+}
+.navbar-brand {
+  display: inline-block;
+}
 .black {
   color: black
 }
@@ -98,4 +106,5 @@ audio {
    .intro-div {
      font-size: 3em;
    }
+ 
  }
