@@ -19,8 +19,8 @@ class App extends Component {
   }
 
   componentWillMount() {
-    // fetch('https://codacade-api.herokuapp.com/')
-    fetch('http://localhost:3001')
+    fetch('https://codacade-api.herokuapp.com/')
+    // fetch('http://localhost:3001')
       .then(users => {
         return users.json()
       })
@@ -52,7 +52,6 @@ class App extends Component {
 
   }
 
-
   handleChange = (e) => {
     
     this.setState({
@@ -60,8 +59,7 @@ class App extends Component {
     }, () => {
       return this.filterCodas()
     })
-  }
-  
+  }  
   
   render() {
         
@@ -81,6 +79,7 @@ class App extends Component {
         <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
           <div className="container">
             <a className="navbar-brand form-intro" href="/">Codacade</a>
+            
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
             </button>
