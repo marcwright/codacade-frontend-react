@@ -7,8 +7,10 @@ export class Card extends Component {
     return (
       <div className="col-xl-4 col-lg-4 animated fadeIn card-hover" key={this.props.id}>
         <div className="card box-shadow">
-          <img className="card-img-top" data-src={this.props.img} alt="Thumbnail [100%x225]"
-              src={this.props.img} />
+          <a href={this.props.githubLink} target="_blank" role="button">
+            <img className="card-img-top" data-src={this.props.img} alt="Thumbnail [100%x225]"
+                src={this.props.img} />
+          </a>
           <div className="card-body">
             <p className="card-text text-center">{this.props.name.toUpperCase()} <span className="black">/ {this.props.name.toUpperCase()}</span></p>
             <div className="container">
