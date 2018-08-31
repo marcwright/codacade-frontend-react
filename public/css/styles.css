@@ -13,15 +13,12 @@ body {
 .btn-success {
   color: white !important
 }
-/* .card-img-top {
-  width: 350px;
-  height: 250px
-} */
-
-audio {
-  height: 25px;
-  width:100px
+.card-img-top {
+  max-height: 200px
 }
+/* .card-body {
+  max-height: 66px;
+} */
 .c1 {
   width: 100px;
   height: 100px;
