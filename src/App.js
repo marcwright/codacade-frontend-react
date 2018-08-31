@@ -71,6 +71,8 @@ class App extends Component {
           return <Card key={coda.id}
                        githubLink={coda.githubLink}
                        name={coda.name}
+                       pubicLink={coda.publicLink}
+                       img={coda.img}
                   />
         })
 
@@ -86,7 +88,7 @@ class App extends Component {
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
               <ul className="navbar-nav mr-auto">
                 <li className="nav-item active">
-                  <a className="nav-link" href="form.html">Add your app<span className="sr-only">(current)</span></a>
+                
                 </li>
               </ul>
               <SearchBar 

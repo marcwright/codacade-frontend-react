@@ -10,6 +10,9 @@ body {
   font-family: Optimist;
   color: red
 }
+.btn-success {
+  color: white !important
+}
 
 audio {
   height: 25px;
