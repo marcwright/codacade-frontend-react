@@ -38,7 +38,7 @@ class App extends Component {
     var filteredCodasArray = []
 
     this.state.initialCodas.forEach(coda => {
-      if (coda.name.toLowerCase().includes(this.state.searchVal)) {
+      if (coda.name.toLowerCase().includes(this.state.searchVal) || coda.appName.toLowerCase().includes(this.state.searchVal)) {
         console.log(coda)
         return filteredCodasArray.push(coda)
       }
