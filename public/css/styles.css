@@ -20,10 +20,19 @@ body {
 .c1 {
   width: 100px;
   height: 100px;
-  display: inline-block
+  margin-right: 100px;
+  margin-top:-25px;
+  margin-bottom: -35px;
+  margin-left: 25px;
+
 }
 .navbar-brand {
-  display: inline-block;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  text-align: center;
+  margin: auto;
 }
 .black {
   color: black
@@ -61,6 +70,7 @@ body {
   font-family: PressStart2P;
   color: black;
   font-size: 2em;
+  margin-top: 3px;
   text-shadow: -2px 0 0 #fdff2a,
     -4px 0 0 #df4a42,
     2px 0 0 #91fcfe,
@@ -71,8 +81,13 @@ body {
 .navbar {
   padding: 0.5em 1em
 }
-
-
+.publicCss {
+  border: 1px solid #004977;
+  box-sizing: border-box
+}
+.search-bar {
+  margin-right: 300px;
+}
  @keyframes blink {
    0% {color: #10BD1B}
    25% {color:#FFE34F}
@@ -87,14 +102,15 @@ body {
 
  }
  @media screen and (max-width: 510px) {
-   /* .codacade-div {
-     width: 100vw !important;
-     height: 25vh !important;
-     box-sizing: border-box;
-     position: relative
-   } */
    .intro-div {
      font-size: 3em;
    }
  
  }
+ @media screen and (max-width: 993px) {
+
+  .c1 {
+    display: none
+  }
+
+}

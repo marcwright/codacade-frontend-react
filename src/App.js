@@ -67,12 +67,13 @@ class App extends Component {
 
         const codas = this.state.codas.map(coda => {
           return <Card key={coda.id}
-                       githubLink={coda.githubLink}
-                       name={coda.name}
-                       appName={coda.appName}
-                       githubRepo={coda.githubRepo}
-                       pubicURL={coda.publicURL}
-                       img={coda.img}
+                        githubLink={coda.publicURL !== "" ? coda.publicURL : coda.githubLink}
+                        name={coda.name}
+                        appName={coda.appName}
+                        githubRepo={coda.githubRepo}
+                        publicURL={coda.publicURL !== "" ? true : false}
+                        img={coda.img}
+                        publicCSSClass={coda.publicURL !== "" ? 'text-primary' : ''}
                   />
         })
 
@@ -81,7 +82,9 @@ class App extends Component {
         <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
           <div className="container">
             <div className="row">              
+                <img src="img/capital-one-logo.svg" className="c1"/>
                 <a className="navbar-brand form-intro" href="/">Codacade</a>
+
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
               </button>

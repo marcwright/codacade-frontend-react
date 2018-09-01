@@ -1,8 +1,17 @@
 import React, { Component } from 'react';
+// import classNames from 'classnames';
 
 export class Card extends Component {
-
+  
   render () {
+
+    // var pcss = this.props.publicURL
+    // console.log(pcss)
+
+    // var cardClass = classNames({
+    //   "card box-shadow": true,
+    //   'publicCss': pcss
+    // });
     
     return (
       <div className="col-xl-4 col-lg-4 animated card-max-height fadeIn card-hover" key={this.props.id}>
