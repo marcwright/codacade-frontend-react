@@ -14,11 +14,9 @@ body {
   color: white !important
 }
 .card-img-top {
-  max-height: 200px
+  height: 13em;
+  max-height: 13em
 }
-/* .card-body {
-  max-height: 66px;
-} */
 .c1 {
   width: 100px;
   height: 100px;
@@ -30,14 +28,6 @@ body {
 .black {
   color: black
 }
-/* .card-hover {
-  transform: scale(1)
-}
-.card-hover:hover {
-  transform: scale(1.05);
-  /* transition-timing-function: ease-in-out;
-  border: 1px grey solid; */
-} */
 .jumbotron {
   background-image: url('../img/pac.jpeg');
 }
@@ -77,6 +67,9 @@ body {
     4px 0 0 #4405fc;
   animation: blink 1s infinite;
   display: block
+}
+.navbar {
+  padding: 0.5em 1em
 }
 
 
