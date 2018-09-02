@@ -39,7 +39,7 @@ class App extends Component {
 
     this.state.initialCodas.forEach(coda => {
       if (coda.name.toLowerCase().includes(this.state.searchVal) || coda.appName.toLowerCase().includes(this.state.searchVal)) {
-        console.log(coda)
+        // console.log(coda)
         return filteredCodasArray.push(coda)
       }
     })
@@ -78,32 +78,43 @@ class App extends Component {
         })
 
     return (
-      <div>
-        <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-          <div className="container">
-            <div className="row">              
-                <img src="img/capital-one-logo.svg" className="c1"/>
-                <a className="navbar-brand form-intro" href="/">Codacade</a>
+      <div className="container">
 
-                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon"></span>
-              </button>
-            </div>
+        <nav className="navbar navbar-expand-sm navbar-light bg-light fixed-top">
+          <div className="container">
+            <div className="row">
+                <div className="col-lg-4"> 
+                  <span className="navbar-brand form-intro">Codacade</span>
+                </div>
+                <div className="col-lg-4">
+                  <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
+                  </button>
+                </div>
+            
+          </div>
+            
+
           
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
               <ul className="navbar-nav mr-auto">
-                <li className="nav-item active">
+                <li className="nav-item active">            
                 
                 </li>
               </ul>
               <SearchBar 
+                
                 searchVal={this.state.searchVal}
                 handleChange={this.handleChange}/>
-            </div>
+     
+          </div>
           </div>
         </nav>
-
         <main role="main">
+
+
+
+
           <div className="album py-5">
             <div className="container">
               <div className="row animated fadeIn">

@@ -17,46 +17,27 @@ body {
   height: 13em;
   max-height: 13em
 }
-.c1 {
+.hamburger {
+  box-sizing: border-box;
+  float: right;
   width: 100px;
-  height: 100px;
-  margin-right: 100px;
-  margin-top:-25px;
-  margin-bottom: -35px;
-  margin-left: 25px;
-
+  /* display: inline-block */
 }
-.navbar-brand {
-  position: absolute;
-  width: 100%;
-  left: 0;
-  top: 0;
-  text-align: center;
-  margin: auto;
+
+.nav-container {
+  margin: 0 10vw
 }
 .black {
   color: black
-}
-.jumbotron {
-  background-image: url('../img/pac.jpeg');
 }
 .pressStartFont {
   font-family: PressStart2P;
   color: red
 }
-.intro-div {
-  font-family: PressStart2P;
-  color: rgb(32, 173, 32);
-  font-size: 4em;
-  text-shadow: -2px 0 0 #fdff2a,
-    -4px 0 0 #df4a42,
-    2px 0 0 #91fcfe,
-    4px 0 0 #4405fc;
-  animation: blink 1s infinite;
-  display: block
-}
+
 .card {
-  margin: .5em 0;
+  margin: 1.2em 0;
+  border: 1.5px grey solid;
 }
 .hide-card {
   display: none;
@@ -76,7 +57,7 @@ body {
     2px 0 0 #91fcfe,
     4px 0 0 #4405fc;
   animation: blink 1s infinite;
-  display: block
+  float: left
 }
 .navbar {
   padding: 0.5em 1em
@@ -85,9 +66,9 @@ body {
   border: 1px solid #004977;
   box-sizing: border-box
 }
-.search-bar {
+/* .search-bar {
   margin-right: 300px;
-}
+} */
  @keyframes blink {
    0% {color: #10BD1B}
    25% {color:#FFE34F}
@@ -107,10 +88,10 @@ body {
    }
  
  }
- @media screen and (max-width: 993px) {
+ /* @media screen and (max-width: 993px) {
 
   .c1 {
     display: none
   }
 
-}
+} */

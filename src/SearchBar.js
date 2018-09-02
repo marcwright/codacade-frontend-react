@@ -5,8 +5,8 @@ export class SearchBar extends Component {
           
 
     return (
-      <form className="form-inline my-2 my-lg-0">
-        <input className="form-control mr-sm-2" 
+      <form className="form-inline">
+        <input className="form-control" 
           type="text" 
           placeholder="Search..." 
           aria-label="Search" 
