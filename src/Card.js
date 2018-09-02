@@ -14,7 +14,7 @@ export class Card extends Component {
     // });
     
     return (
-      <div className="col-xl-4 col-lg-4 animated fadeIn" key={this.props.id}>
+      <div className="col-xl-4 col-lg-4 col-md-6 animated fadeIn" key={this.props.id}>
         <div className="card box-shadow">
           <a href={this.props.githubLink} target="_blank" role="button">
             <img className="card-img-top" data-src={this.props.img} alt="Thumbnail [100%x225]"
