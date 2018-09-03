@@ -27,6 +27,10 @@ body {
   font-family: PressStart2P;
   color: red
 }
+.card-text {
+  margin-bottom: .4em;
+  font-size: 1em;
+}
 
 .card {
   margin: 1.2em 0;
@@ -60,6 +64,11 @@ body {
 }
 .navbar-collapse {
   margin-right: 20px
+}
+.publicLetter {
+  color: blue;
+  text-transform: lowercase;
+  font-size: 8px;
 }
 #nav-row {
   margin: 0px 40px 0px 10px;

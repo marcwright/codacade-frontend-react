@@ -12,6 +12,8 @@ export class Card extends Component {
     //   "card box-shadow": true,
     //   'publicCss': pcss
     // });
+    var insertPublicLetter = (this.props.publicURL) ? <span class='publicLetter'>public</span> : ""
+    
     
     return (
       <div className="col-xl-4 col-lg-4 col-md-6 animated fadeIn" key={this.props.id}>
@@ -21,7 +23,11 @@ export class Card extends Component {
                 src={this.props.img} />
           </a>
           <div className="card-body">
-            <p className="card-text text-center">{this.props.name.toUpperCase()} <span className="black">/ {this.props.appName.toUpperCase()}</span></p>
+              <p className="card-text text-center">{this.props.name.toUpperCase()} 
+                <span className="black">
+                  <a href={this.props.githubLink} target="_blank" role="button">/{this.props.appName.toUpperCase()}{insertPublicLetter}</a>
+                </span>
+              </p>
             <div className="container">
               <a href={this.props.githubRepo} className="btn btn-light btn-outline-primary text-center col-lg-12 btn-sm" target="_blank" role="button">GitHub Repo</a>
            </div>
