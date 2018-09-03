@@ -19,7 +19,8 @@ class App extends Component {
   }
 
   componentWillMount() {
-    fetch('https://codacade-api.herokuapp.com/')
+    fetch('http://ec2-34-205-43-137.compute-1.amazonaws.com:3001/')    
+    // fetch('https://codacade-api.herokuapp.com/')
     // fetch('http://localhost:3001')
       .then(users => {
         return users.json()
@@ -33,7 +34,7 @@ class App extends Component {
         // console.log(this.state.initialCodas)
     })
   }
-    
+
   filterCodas = () => {
     var filteredCodasArray = []
 
@@ -53,16 +54,16 @@ class App extends Component {
   }
 
   handleChange = (e) => {
-    
+
     this.setState({
       searchVal: e.target.value.toLowerCase()
     }, () => {
       return this.filterCodas()
     })
-  }  
-  
+  }
+
   render() {
-        
+
         // console.log(this.state.searchVal)
 
         const codas = this.state.codas.map(coda => {
@@ -82,31 +83,33 @@ class App extends Component {
 
         <nav className="navbar navbar-expand-sm navbar-light bg-light fixed-top">
           <div className="container">
+
             <div className="row" id="nav-row">
                 <div className="col-lg-4 col-10"> 
                   <span className="form-intro">Codacade</span>
+
                 </div>
                 <div className="col-lg-4 col-2">
                   <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon  float-right"></span>
                   </button>
                 </div>
-            
-          </div>
-            
 
-          
+          </div>
+
+
+
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
               <ul className="navbar-nav mr-auto">
-                <li className="nav-item active">            
-                
+                <li className="nav-item active">
+
                 </li>
               </ul>
-              <SearchBar 
-                
+              <SearchBar
+
                 searchVal={this.state.searchVal}
                 handleChange={this.handleChange}/>
-     
+
           </div>
           </div>
         </nav>
@@ -118,8 +121,8 @@ class App extends Component {
           <div className="album py-5">
             <div className="container">
               <div className="row animated fadeIn">
-              
-                {codas}        
+
+                {codas}
               </div>
             </div>
           </div>
