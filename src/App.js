@@ -79,7 +79,7 @@ class App extends Component {
         })
 
     return (
-      <div className="container">
+      <div>
 
         <nav className="navbar navbar-expand-sm navbar-light bg-light fixed-top">
           <div className="container">
