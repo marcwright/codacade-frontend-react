@@ -12,7 +12,7 @@ export class Card extends Component {
     //   "card box-shadow": true,
     //   'publicCss': pcss
     // });
-    var insertPublicLetter = (this.props.publicURL) ? <span class='publicLetter'>public</span> : ""
+    var insertPublicLetter = (this.props.publicURL) ? <span className='publicLetter'>public</span> : ""
 
 
     return (

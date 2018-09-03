@@ -19,7 +19,7 @@ class App extends Component {
   }
 
   componentWillMount() {
-    fetch('http://ec2-34-205-43-137.compute-1.amazonaws.com:3001/')    
+    fetch('http://ec2-34-205-43-137.compute-1.amazonaws.com:3001/')
     // fetch('https://codacade-api.herokuapp.com/')
     // fetch('http://localhost:3001')
       .then(users => {
@@ -85,7 +85,7 @@ class App extends Component {
           <div className="container">
 
             <div className="row" id="nav-row">
-                <div className="col-lg-4 col-10"> 
+                <div className="col-lg-4 col-10">
                   <span className="form-intro">Codacade</span>
 
                 </div>
