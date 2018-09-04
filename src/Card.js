@@ -12,7 +12,7 @@ export class Card extends Component {
     //   "card box-shadow": true,
     //   'publicCss': pcss
     // });
-    var insertPublicLetter = (this.props.publicURL) ? <span className='publicLetter'>public</span> : ""
+    var insertPublicLetter = (this.props.publicURL) ? <span className='publicLetter'>p</span> : ""
 
 
     return (
@@ -25,7 +25,7 @@ export class Card extends Component {
           <div className="card-body">
               <p className="card-text text-center">{this.props.name.toUpperCase()}
                 <span className="black">
-                  <a href={this.props.githubLink} target="_blank" role="button">/{this.props.appName.toUpperCase()}{insertPublicLetter}</a>
+                  <a href={this.props.githubLink} target="_blank" role="button">/{this.props.appName.toUpperCase()} {insertPublicLetter}</a>
                 </span>
               </p>
             <div className="container">
