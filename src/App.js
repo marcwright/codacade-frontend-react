@@ -19,8 +19,8 @@ class App extends Component {
   }
 
   componentWillMount() {
-    fetch('http://ec2-34-205-43-137.compute-1.amazonaws.com:3001/')
-    // fetch('https://codacade-api.herokuapp.com/')
+    // fetch('http://ec2-34-205-43-137.compute-1.amazonaws.com:3001/')
+    fetch('https://codacade-api.herokuapp.com/')
     // fetch('http://localhost:3001')
       .then(users => {
         return users.json()
